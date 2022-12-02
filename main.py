@@ -4,12 +4,13 @@ import copy
 from core.filter import GuidedFilter
 
 #All the tweakable parameters
-INPUT_IMAGE_PATH = ".\input images\dark3.jpg"
+INPUT_IMAGE_PATH = ".\input images\dark4.jpg"
 OUTPUT_IMAGE_PATH = ".\output images"
 gamma = 2
 alpha = 0.5
 radius = 20
 eps = 0.001
+
 
 
 def custom_hist(img_array):
@@ -95,6 +96,3 @@ O_rgb = cv2.cvtColor(O_rgb, cv2.COLOR_HSV2BGR)
 cv2.imwrite(OUTPUT_IMAGE_PATH + "\\colored_output.jpg", new_img)
 
 cv2.imwrite(OUTPUT_IMAGE_PATH + "\\final_comparison.jpg", np.hstack((img, O_rgb)))
-
-cv2.waitKey(0) 
-cv2.destroyAllWindows() 
